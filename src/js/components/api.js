@@ -2,7 +2,6 @@ export default class API {
   async getData(localList) {
     const cacheList = window.localStorage.getItem(localList)
     if (cacheList) {
-      console.log('hola')
       return JSON.parse(cacheList);
     }
     const url = `${window.location.href}db.json`

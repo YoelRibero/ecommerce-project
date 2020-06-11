@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     product.addEventListener('click', (e) => {
       e.preventDefault()
       if (e.target.tagName === 'BUTTON') {
-        console.log(e.path[1].dataset.id);
         cart.addProductCart(e.path[1].dataset.id);
       }
     })

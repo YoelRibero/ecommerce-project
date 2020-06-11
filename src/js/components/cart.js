@@ -46,7 +46,6 @@ export default class Cart {
     this.printCart(this.cart);
   }
   printCart(cart) {
-    console.log(cart)
     document.querySelector("#cart").innerHTML = '';
     cart.forEach(product => {
       const { id, name} = product
