@@ -1,5 +1,21 @@
 $color-primary: #48bb73;
+$color-font: #333;
+
+$font: 'Roboto', sans-serif;
+$font-secondary: 'Kanit', sans-serif;
 
 body {
-  background-color: $color-primary;
+  font-family: $font;
+  color: $color-font;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-secondary;
+}
+
+.cart {
+  position: fixed;
+  right: 20%;
+  top: 2%;
 }
