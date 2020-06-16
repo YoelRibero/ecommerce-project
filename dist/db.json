@@ -4,59 +4,60 @@
       "id": 1,
       "name": "Casa con 2 ambientes, muy cómoda",
       "precio": "$ 10.000",
-      "dormi": "50 m2 | 2 dormitorios",
+      "bedroom": "50 m2 | 2 dormitorios",
       "estado": "Alquiler",
       "ubicacion": "Montevideo",
-      "imagen": "1.jpg",
+      "image": "houses-1.jpg",
       "category": "house"
     },
     {
       "id": 2,
       "name": "Casa con 5 ambientes, mansión",
       "precio": "U$S 250.000",
-      "dormi": "250 m2 | 5 dormitorios",
+      "bedroom": "250 m2 | 5 dormitorios",
       "estado": "Venta",
       "ubicacion": "San José",
-      "imagen": "2.jpg"
+      "image": "houses-2.jpg",
+      "category": "house"
     },
     {
       "id": 3,
       "name": "Casa con 2 ambientes, chica",
       "precio": "U$S 30.000",
-      "dormi": "80 m2 | 2 dormitorios",
+      "bedroom": "80 m2 | 2 dormitorios",
       "estado": "Venta",
       "ubicacion": "Soriano",
-      "imagen": "3.jpg",
+      "image": "houses-3.jpg",
       "category": "house"
     },
     {
       "id": 4,
       "precio": "$ 8.000",
       "name": "Casa con 1 ambiente, ideal para 2 personas",
-      "dormi": "70 m2 | 1 dormitorio",
+      "bedroom": "70 m2 | 1 dormitorio",
       "estado": "Alquiler",
       "ubicacion": "Montevideo",
-      "imagen": "4.jpg",
+      "image": "houses-4.jpg",
       "category": "house"
     },
     {
       "id": 5,
       "name": "Casa con 3 ambientes, muy cómoda y espaciosa",
       "precio": "U$S 150.000",
-      "dormi": "240 m2 | 3 dormitorios",
+      "bedroom": "240 m2 | 3 dormitorios",
       "estado": "Venta",
       "ubicacion": "Maldonado",
-      "imagen": "5.jpg",
+      "image": "houses-5.jpg",
       "category": "house"
     },
     {
       "id": 6,
       "name": "Casa con 6 dormitorios, para grandes familias",
       "precio": "U$S 350.000",
-      "dormi": "300 m2 | 6 dormitorios",
+      "bedroom": "300 m2 | 6 dormitorios",
       "estado": "Venta",
       "ubicacion": "Montevideo",
-      "imagen": "6.jpg",
+      "image": "houses-6.jpg",
       "category": "house"
     },
     {
@@ -64,9 +65,9 @@
       "name": "Volkswagen Fusca",
       "precio": "U$S 4.800",
       "año": "1985 | 180.000 Km",
-      "marca": "Volkswagen Fusca",
+      "brand": "Volkswagen Fusca",
       "ubicacion": "Montevideo",
-      "imagen": "1.jpg",
+      "image": "cars-3.jpg",
       "category": "car"
     },
     {
@@ -74,9 +75,9 @@
       "name": "BMW 0km full 2019",
       "precio": "U$S 40.000",
       "año": "2016 | 0 Km",
-      "marca": "BMW",
+      "brand": "BMW",
       "ubicacion": "Canelones",
-      "imagen": "2.jpg",
+      "image": "cars-4.jpg",
       "category": "car"
     },
     {
@@ -84,9 +85,9 @@
       "name": "Fiat 600 1990",
       "precio": "U$S 3.000",
       "año": "1980 | 200.000 Km",
-      "marca": "Fiat 600",
+      "brand": "Fiat 600",
       "ubicacion": "Montevideo",
-      "imagen": "3.jpg",
+      "image": "cars-5.jpg",
       "category": "car"
     },
     {
@@ -94,9 +95,9 @@
       "name": "Moto Vespa Vintage",
       "precio": "U$S 3.500",
       "año": "2016 | 0 Km",
-      "marca": "Motocicleta Vespa",
+      "brand": "Motocicleta Vespa",
       "ubicacion": "Montevideo",
-      "imagen": "4.jpg",
+      "image": "cars-6.jpg",
       "category": "car"
     },
     {
@@ -104,9 +105,9 @@
       "name": "BMW Serie 3",
       "precio": "U$S 4.000",
       "año": "1980 | 56.865 Km",
-      "marca": "BMW Serie 3",
+      "brand": "BMW Serie 3",
       "ubicacion": "Colonia",
-      "imagen": "5.jpg",
+      "image": "cars-2.jpg",
       "category": "car"
     },
     {
@@ -114,58 +115,64 @@
       "name": "Chevrolet 2020",
       "precio": "U$S 30.000",
       "año": "2017 | 0 Km",
-      "marca": "Chevrolet",
+      "brand": "Chevrolet",
       "ubicacion": "Montevideo",
-      "imagen": "6.jpg",
+      "image": "cars-1.jpg",
       "category": "car"
     },
     {
       "id": 13,
       "precio": "$ 20.000",
       "name": "Computadora completa",
-      "marca": "MAC",
+      "brand": "MAC",
       "ubicacion": "Montevideo",
-      "imagen": "1.jpg"
+      "image": "technology-1.jpg",
+      "category": "technology"
     },
     {
       "id": 14,
       "precio": "$ 15.000",
       "name": "Notebook 4gb RAM",
-      "marca": "Hp",
+      "brand": "Hp",
       "ubicacion": "Montevideo",
-      "imagen": "2.jpg"
+      "image": "technology-2.jpg",
+      "category": "technology"
     },
     {
       "id": 15,
       "precio": "$ 17.000",
       "name": "Notebook 8gb RAM",
-      "marca": "Samsung",
+      "brand": "Samsung",
       "ubicacion": "Montevideo",
-      "imagen": "3.jpg"
+      "image": "technology-3.jpg",
+      "category": "technology"
     },
     {
       "id": 16,
       "precio": "$ 28.000",
       "name": "PC con Tarjeta de Video NVIDIA",
-      "marca": "LG",
+      "brand": "LG",
       "ubicacion": "Montevideo",
-      "imagen": "4.jpg"
+      "image": "technology-4.jpg",
+      "category": "technology"
     },
     {
       "id": 17,
       "precio": "$ 23.000",
       "name": "PC sin torre",
-      "marca": "MAC",
+      "brand": "MAC",
       "ubicacion": "Montevideo",
-      "imagen": "5.jpg"
+      "image": "technology-5.jpg",
+      "category": "technology"
     },
     {
       "id": 18,
       "precio": "$ 7.000",
       "name": "Smart Watch",
-      "marca": "Apple",
+      "brand": "Apple",
       "ubicacion": "Montevideo",
-      "imagen": "6.jpg"
+      "image": "technology-6.jpg",
+      "category": "technology"
     }
   ]
 }

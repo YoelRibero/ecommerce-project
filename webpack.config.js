@@ -35,6 +35,19 @@ module.exports = {
           { loader: "sass-loader" },
         ],
       },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
+      {
+        test: /\.jpg|png|gif|eot|ttf|svg|mp4|webm$/,
+        use: {
+          loader: "url-loader",
+          options: {
+            limit: 90000,
+          },
+        },
+      },
     ],
   },
   plugins: [

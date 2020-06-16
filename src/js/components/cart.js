@@ -8,6 +8,7 @@ export default class Cart {
       this.printCart(this.cart)
     } else {
       this.cart = [];
+      this.printCart(this.cart);
     }
     this.api = new API()
   }
@@ -20,7 +21,7 @@ export default class Cart {
     return `
         <article class="product" data-id="${id}">
           <div class="product__title">${title}</div>
-          <button class="button" data-deleted>Eliminar del carrito</div>
+          <button class="button button--danger" data-deleted>Eliminar del carrito</div>
         </article>
       `
     ;
@@ -46,9 +47,13 @@ export default class Cart {
     this.printCart(this.cart);
   }
   printCart(cart) {
-    document.querySelector("#cart").innerHTML = '';
+    if (cart.length === 0) {
+      document.querySelector("#cart").innerHTML = `<p>Tu carrito está vacío</p>`
+    } else {
+      document.querySelector("#cart").innerHTML = "";
+    }
     cart.forEach(product => {
-      const { id, name} = product
+      const { id, name } = product
       const HTML = this.templateProduct(id, name)
       const templateHTML = this.createTemplate(HTML)
       document.querySelector("#cart").append(templateHTML)

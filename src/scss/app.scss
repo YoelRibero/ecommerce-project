@@ -1,1 +1,10 @@
-@import './components/globals/globals.scss';
+@import './globals/globals.scss';
+
+@import './components/header.scss';
+@import './components/footer.scss';
+
+@import './components/home.scss';
+@import './components/catalogue.scss';
+
+@import './components/products.scss';
+@import './components/carts.scss';

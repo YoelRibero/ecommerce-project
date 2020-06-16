@@ -1,6 +1,7 @@
 import "../scss/app.scss"
 import Products from './components/products'
 import Cart from './components/cart'
+import swal from "sweetalert";
 
 document.addEventListener('DOMContentLoaded', async () => {
   // Instanciar clases
@@ -14,7 +15,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     product.addEventListener('click', (e) => {
       e.preventDefault()
       if (e.target.tagName === 'BUTTON') {
-        cart.addProductCart(e.path[1].dataset.id);
+        swal("Good job!", "You have added a product to the cart", "success");
+        setTimeout(() => {
+          cart.addProductCart(e.path[1].dataset.id);
+        }, 1000)
       }
     })
   })
@@ -25,8 +29,28 @@ document.addEventListener('DOMContentLoaded', async () => {
   $cartContainer.addEventListener('click', (e) => {
     e.preventDefault()
     if(e.target.dataset.deleted === '') {
-      cart.deletedProduct(e.path[1].dataset.id);
+      swal({
+        title: "Dalete",
+        text:"Are you sure you want to remove the product from the cart?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      }).then((willDelete) => {
+        if (willDelete) {
+          swal("The product was deleted from the cart", {
+            icon: "success",
+          });
+          setTimeout(() => {
+            cart.deletedProduct(e.path[1].dataset.id);
+          }, 1000)
+        } 
+      });
     }
+  })
+
+  // Header hamburguer
+  document.querySelector(".header__hamburguer").addEventListener('click', () => {
+    document.querySelector(".header__nav").classList.toggle('is-active');
   })
 })
 

@@ -1,0 +1,47 @@
+$color-primary: #48bb73;
+$color-font: #333;
+$color-light: #fff;
+$color-danger: #d11a2a;
+$shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.2);
+
+$font: 'Roboto', sans-serif;
+$font-secondary: 'Montserrat', sans-serif;;
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: $font;
+  color: $color-font;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-secondary;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.button {
+  border: 0;
+  padding: .5rem 1rem;
+  text-align: center;
+  background-color: $color-primary;
+  color: $color-light;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: $font-secondary;
+  &:focus {
+    outline: none;
+  }
+  cursor: pointer;
+  &--danger {
+    background-color: $color-danger;
+  }
+}

@@ -1,0 +1,128 @@
+.header {
+  height: 80px;
+  background-color: $color-light;
+  box-shadow: $shadow;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  &__container {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    width: 50%;
+    &--figure {
+      margin: 0;
+      img {
+        max-width: 100%;
+        @media screen and (min-width: 600px) {
+          height: 50px;
+        }
+      }
+    }
+  }
+  &__hamburguer {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: $color-primary;
+    position: relative;
+    box-shadow: $shadow;
+    cursor: pointer;
+    transition: .3s;
+    z-index: 2;
+    &:focus {
+      outline: none;
+    }
+    span, span::before, span::after {
+      background: #fff;
+      content: "";
+      display: block;
+      height: 2px;
+      position: absolute;
+      transform: rotate(0);
+      transition: transform .1s ease-in,top .1s ease-in 150ms,bottom .1s ease-in 150ms;
+      width: 1.5rem;
+    }
+    span {
+      top: 1.5rem;
+      left: .5rem;
+      width: 1rem;
+      &::before {
+        top: -.5rem;
+      }
+      &::after {
+        top: .5rem;
+        width: 1.8rem;
+      }
+    }
+  }
+  &__nav {
+    display: none;
+    transform: translateX(1000px);
+    &.is-active {
+      display: block;
+      padding: 1rem 2rem;
+      animation: fade .3s ease-out forwards;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 3rem;
+      z-index: 1;
+      background-color: $color-light;
+      + .header__hamburguer {
+        span {
+          background-color: $color-primary;
+          left: .75rem;
+          &::before {
+            transform: rotate(45deg);
+            top: 0;
+          }
+          &::after {
+            top: 0;
+            width: 1.5rem;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+      @media screen and (min-width: 425px) {
+        left: 40%;
+      }
+      @media screen and (min-width: 600px) {
+        left: 50%;
+      }
+    }
+  }
+  &__nav--list {
+    list-style: none;
+    padding: 1rem 0 0;
+    margin: 0;
+  }
+  &__nav--item {
+    margin-bottom: 1rem;
+    a {
+      text-decoration: none;
+      color: $color-font;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+@keyframes fade {
+  0% {
+    transform: translateX(1000px);
+  }
+  50% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
