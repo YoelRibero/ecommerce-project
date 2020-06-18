@@ -1,16 +1,17 @@
 .footer {
-  background-color: $color-primary;
-  color: $color-light;
+  background-color: $color-light;
+  border-top: 1px solid $color-border;
   text-align: center;
   &__container {
     padding: 1rem 0;
     @media screen and (min-width: 1024px) {
       display: flex;
       justify-content: space-between;
+      padding-top: 4rem;
     }
   }
   &__section {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     @media screen and (min-width: 1024px) {
       width: 32%; 
     }
@@ -26,8 +27,7 @@
           overflow: hidden;
           a {
             display: flex;
-            background-color: $color-light;
-            color: $color-primary;
+            background-color: $color-primary;
             font-weight: bold;
             justify-content: center;
             align-items: center;
@@ -54,7 +54,7 @@
   }
   &__title {
     margin: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     letter-spacing: 2px;
   }
   &__list {
@@ -63,12 +63,13 @@
     margin: 0;
     @media screen and (min-width: 1024px) {
       text-align: left;
+      padding-left: .5rem;
     }
   }
   &__item {
     margin-bottom: 1rem;
     a {
-      color: $color-light;
+      color: $color-font;
       letter-spacing: 2px;
       text-decoration: none;
     }

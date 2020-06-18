@@ -2,6 +2,7 @@ $color-primary: #48bb73;
 $color-font: #333;
 $color-light: #fff;
 $color-danger: #d11a2a;
+$color-border: #efefef;
 $shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.2);
 
 $font: 'Roboto', sans-serif;
@@ -31,8 +32,9 @@ h1, h2, h3, h4, h5, h6 {
   border: 0;
   padding: .5rem 1rem;
   text-align: center;
-  background-color: $color-primary;
-  color: $color-light;
+  background-color: $color-light;
+  border-top: 1px solid $color-border;
+  color: $color-primary;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -42,6 +44,44 @@ h1, h2, h3, h4, h5, h6 {
   }
   cursor: pointer;
   &--danger {
-    background-color: $color-danger;
+    color: $color-danger;
+  }
+}
+
+.pill-count {
+  position: absolute;
+  bottom: 0;
+  left: 1.2rem;
+  background-color: $color-danger;
+  color: $color-light;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 17px;
+  font-size: 14px;
+}
+
+@keyframes fadeRight {
+  0% {
+    transform: translateX(1000px);
+  }
+  50% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
   }
 }

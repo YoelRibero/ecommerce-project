@@ -1,4 +1,6 @@
 import API from './api'
+import imageDelete from '../../images/delete.svg'
+import imageProduct from '../../images/products/technology-2.jpg'
 
 export default class Cart {
   constructor() {
@@ -17,23 +19,35 @@ export default class Cart {
 		html.body.innerHTML = HTMLString
 		return html.body.children[0]
 	}
-  templateProduct(id, title) {
+  templateProduct(id, title, price) {
     return `
-        <article class="product" data-id="${id}">
-          <div class="product__title">${title}</div>
-          <button class="button button--danger" data-deleted>Eliminar del carrito</div>
+        <article class="product__cart" data-id="${id}">
+          <div class="product__cart--info">
+            <figure class="product__cart--image">
+              <img src="${imageProduct}" />
+            </figure>
+            <section class="product__cart--description">
+              <div class="product__cart--title">${title}</div>
+              <div class="product__cart--price">${price}</div>
+            </section>
+          </div>
+          <button class="button button--danger"><img src="${imageDelete}" data-deleted /></div>
         </article>
-      `
-    ;
+      `;
   }
   async addProductCart(id) {
-    const data = await this.api.getData('products')
-    // const productCart = data.products.filter(product => product.id === parseInt(id))
+    if (this.cart.find(product => product.id === parseInt(id))) {
+      swal("Oh Oh!", "The product already exist in the cart...", "error");
+      return false
+    }
+    swal("Perfect!", "You have added a product to the cart", "success");
+    const data = await this.api.getData("products");
     data.products.forEach(product => {
       if (product.id === parseInt(id)) {
         const productCart = {
           id: product.id,
           name: product.name,
+          price: product.price
         };
         this.cart.push(productCart);
         window.localStorage.setItem("cart", JSON.stringify(this.cart));
@@ -48,15 +62,18 @@ export default class Cart {
   }
   printCart(cart) {
     if (cart.length === 0) {
-      document.querySelector("#cart").innerHTML = `<p>Tu carrito está vacío</p>`
+      document.querySelector(
+        ".nav__cart--content"
+      ).innerHTML = `<p>Your cart is empty</p>`;
     } else {
-      document.querySelector("#cart").innerHTML = "";
+      document.querySelector(".nav__cart--content").innerHTML = "";
     }
+    document.querySelector('.pill-count').textContent = cart.length
     cart.forEach(product => {
-      const { id, name } = product
-      const HTML = this.templateProduct(id, name)
+      const { id, name, price } = product
+      const HTML = this.templateProduct(id, name, price)
       const templateHTML = this.createTemplate(HTML)
-      document.querySelector("#cart").append(templateHTML)
+      document.querySelector(".nav__cart--content").append(templateHTML);
     })
   }
 } 

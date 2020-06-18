@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Casa con 2 ambientes, muy cómoda",
-      "precio": "$ 10.000",
+      "price": "$ 10.000",
       "bedroom": "50 m2 | 2 dormitorios",
       "estado": "Alquiler",
       "ubicacion": "Montevideo",
@@ -13,7 +13,7 @@
     {
       "id": 2,
       "name": "Casa con 5 ambientes, mansión",
-      "precio": "U$S 250.000",
+      "price": "U$S 250.000",
       "bedroom": "250 m2 | 5 dormitorios",
       "estado": "Venta",
       "ubicacion": "San José",
@@ -23,7 +23,7 @@
     {
       "id": 3,
       "name": "Casa con 2 ambientes, chica",
-      "precio": "U$S 30.000",
+      "price": "U$S 30.000",
       "bedroom": "80 m2 | 2 dormitorios",
       "estado": "Venta",
       "ubicacion": "Soriano",
@@ -32,7 +32,7 @@
     },
     {
       "id": 4,
-      "precio": "$ 8.000",
+      "price": "$ 8.000",
       "name": "Casa con 1 ambiente, ideal para 2 personas",
       "bedroom": "70 m2 | 1 dormitorio",
       "estado": "Alquiler",
@@ -43,7 +43,7 @@
     {
       "id": 5,
       "name": "Casa con 3 ambientes, muy cómoda y espaciosa",
-      "precio": "U$S 150.000",
+      "price": "U$S 150.000",
       "bedroom": "240 m2 | 3 dormitorios",
       "estado": "Venta",
       "ubicacion": "Maldonado",
@@ -53,7 +53,7 @@
     {
       "id": 6,
       "name": "Casa con 6 dormitorios, para grandes familias",
-      "precio": "U$S 350.000",
+      "price": "U$S 350.000",
       "bedroom": "300 m2 | 6 dormitorios",
       "estado": "Venta",
       "ubicacion": "Montevideo",
@@ -63,7 +63,7 @@
     {
       "id": 7,
       "name": "Volkswagen Fusca",
-      "precio": "U$S 4.800",
+      "price": "U$S 4.800",
       "año": "1985 | 180.000 Km",
       "brand": "Volkswagen Fusca",
       "ubicacion": "Montevideo",
@@ -73,7 +73,7 @@
     {
       "id": 8,
       "name": "BMW 0km full 2019",
-      "precio": "U$S 40.000",
+      "price": "U$S 40.000",
       "año": "2016 | 0 Km",
       "brand": "BMW",
       "ubicacion": "Canelones",
@@ -83,7 +83,7 @@
     {
       "id": 9,
       "name": "Fiat 600 1990",
-      "precio": "U$S 3.000",
+      "price": "U$S 3.000",
       "año": "1980 | 200.000 Km",
       "brand": "Fiat 600",
       "ubicacion": "Montevideo",
@@ -93,7 +93,7 @@
     {
       "id": 10,
       "name": "Moto Vespa Vintage",
-      "precio": "U$S 3.500",
+      "price": "U$S 3.500",
       "año": "2016 | 0 Km",
       "brand": "Motocicleta Vespa",
       "ubicacion": "Montevideo",
@@ -103,7 +103,7 @@
     {
       "id": 11,
       "name": "BMW Serie 3",
-      "precio": "U$S 4.000",
+      "price": "U$S 4.000",
       "año": "1980 | 56.865 Km",
       "brand": "BMW Serie 3",
       "ubicacion": "Colonia",
@@ -113,7 +113,7 @@
     {
       "id": 12,
       "name": "Chevrolet 2020",
-      "precio": "U$S 30.000",
+      "price": "U$S 30.000",
       "año": "2017 | 0 Km",
       "brand": "Chevrolet",
       "ubicacion": "Montevideo",
@@ -122,7 +122,7 @@
     },
     {
       "id": 13,
-      "precio": "$ 20.000",
+      "price": "$ 20.000",
       "name": "Computadora completa",
       "brand": "MAC",
       "ubicacion": "Montevideo",
@@ -131,7 +131,7 @@
     },
     {
       "id": 14,
-      "precio": "$ 15.000",
+      "price": "$ 15.000",
       "name": "Notebook 4gb RAM",
       "brand": "Hp",
       "ubicacion": "Montevideo",
@@ -140,7 +140,7 @@
     },
     {
       "id": 15,
-      "precio": "$ 17.000",
+      "price": "$ 17.000",
       "name": "Notebook 8gb RAM",
       "brand": "Samsung",
       "ubicacion": "Montevideo",
@@ -149,7 +149,7 @@
     },
     {
       "id": 16,
-      "precio": "$ 28.000",
+      "price": "$ 28.000",
       "name": "PC con Tarjeta de Video NVIDIA",
       "brand": "LG",
       "ubicacion": "Montevideo",
@@ -158,7 +158,7 @@
     },
     {
       "id": 17,
-      "precio": "$ 23.000",
+      "price": "$ 23.000",
       "name": "PC sin torre",
       "brand": "MAC",
       "ubicacion": "Montevideo",
@@ -167,7 +167,7 @@
     },
     {
       "id": 18,
-      "precio": "$ 7.000",
+      "price": "$ 7.000",
       "name": "Smart Watch",
       "brand": "Apple",
       "ubicacion": "Montevideo",

@@ -15,16 +15,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     product.addEventListener('click', (e) => {
       e.preventDefault()
       if (e.target.tagName === 'BUTTON') {
-        swal("Good job!", "You have added a product to the cart", "success");
-        setTimeout(() => {
-          cart.addProductCart(e.path[1].dataset.id);
-        }, 1000)
+        cart.addProductCart(e.path[1].dataset.id);
+        
+        // setTimeout(() => {
+          
+        // }, 1000)
       }
     })
   })
   
   //
-  const $cartContainer = document.querySelector('#cart');
+  const $cartContainer = document.querySelector(".nav__cart--content");
   // Listener deleted product from cart
   $cartContainer.addEventListener('click', (e) => {
     e.preventDefault()
@@ -41,7 +42,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             icon: "success",
           });
           setTimeout(() => {
-            cart.deletedProduct(e.path[1].dataset.id);
+            cart.deletedProduct(e.path[2].dataset.id);
           }, 1000)
         } 
       });
@@ -51,6 +52,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Header hamburguer
   document.querySelector(".header__hamburguer").addEventListener('click', () => {
     document.querySelector(".header__nav").classList.toggle('is-active');
+  })
+
+  // dropdown Cart
+  document.querySelector("[data-cart]").addEventListener('click', (e) => {
+    e.preventDefault()
+    e.path[2].childNodes[5].classList.toggle('is-active');
+    // document.querySelector(".nav__cart").classList.toggle('is-active')
   })
 })
 

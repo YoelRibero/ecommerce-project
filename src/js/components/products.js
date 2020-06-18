@@ -1,5 +1,5 @@
 import API from "./api";
-import images from "../../images/products/cars-1.jpg";
+import images from "../../images/products/technology-2.jpg";
 
 export default class Products {
   constructor() {
@@ -14,7 +14,7 @@ export default class Products {
     return `
         <article class="product" data-id="${id}">
           <div class="product__image">
-            <img src="${images}" alt="product-${id}" />
+            <img src="src/images/products/${images}" alt="product-${id}" />
           </div>
           <div class="product__description">
             <div class="product__title">${title}</div>
