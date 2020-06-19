@@ -1,9 +1,14 @@
 import API from "./api";
-import images from "../../images/products/technology-2.jpg";
+import images from "../../images/1.jpg";
 
 export default class Products {
   constructor() {
     this.api = new API()
+  }
+  async getProducts() {
+    const data = await this.api.getData("products");
+    const products = data.products;
+    return products
   }
   createTemplate(HTMLString) {
 		const html = document.implementation.createHTMLDocument()
@@ -28,9 +33,7 @@ export default class Products {
         </article>
       `;
   }
-  async mapProducts() {
-    const data = await this.api.getData('products')
-    const products = data.products
+  mapProducts(products, container) {
     products.forEach(product => {
       let { id, image, name, bedroom, brand, category } = product
       if (bedroom === undefined) {
@@ -40,7 +43,17 @@ export default class Products {
       }
       const HTML = this.templateProduct(id, image, name, bedroom, brand, category)
       const templateHTML = this.createTemplate(HTML)
-      document.querySelector(".catalogue").append(templateHTML);
+      document.querySelector(container).append(templateHTML);
     })
+  }
+  async productsRandom(quanty, container) {
+    const products = await this.getProducts();
+    let productsRandom = []
+    for (let i = 0; i < quanty; i++) {
+      const randomNumber = Math.floor(Math.random() * (18 - 1)) + 1;
+      productsRandom.push(products[randomNumber])
+    }
+    const productsWithoutRepeated = productsRandom.filter((product, index) => productsRandom.indexOf(product) === index)
+    this.mapProducts(productsWithoutRepeated, container);
   }
 }

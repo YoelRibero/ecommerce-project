@@ -8,7 +8,7 @@
       "estado": "Alquiler",
       "ubicacion": "Montevideo",
       "image": "houses-1.jpg",
-      "category": "house"
+      "category": "houses"
     },
     {
       "id": 2,
@@ -18,7 +18,7 @@
       "estado": "Venta",
       "ubicacion": "San José",
       "image": "houses-2.jpg",
-      "category": "house"
+      "category": "houses"
     },
     {
       "id": 3,
@@ -28,7 +28,7 @@
       "estado": "Venta",
       "ubicacion": "Soriano",
       "image": "houses-3.jpg",
-      "category": "house"
+      "category": "houses"
     },
     {
       "id": 4,
@@ -38,7 +38,7 @@
       "estado": "Alquiler",
       "ubicacion": "Montevideo",
       "image": "houses-4.jpg",
-      "category": "house"
+      "category": "houses"
     },
     {
       "id": 5,
@@ -48,7 +48,7 @@
       "estado": "Venta",
       "ubicacion": "Maldonado",
       "image": "houses-5.jpg",
-      "category": "house"
+      "category": "houses"
     },
     {
       "id": 6,
@@ -58,7 +58,7 @@
       "estado": "Venta",
       "ubicacion": "Montevideo",
       "image": "houses-6.jpg",
-      "category": "house"
+      "category": "houses"
     },
     {
       "id": 7,
@@ -68,7 +68,7 @@
       "brand": "Volkswagen Fusca",
       "ubicacion": "Montevideo",
       "image": "cars-3.jpg",
-      "category": "car"
+      "category": "cars"
     },
     {
       "id": 8,
@@ -78,7 +78,7 @@
       "brand": "BMW",
       "ubicacion": "Canelones",
       "image": "cars-4.jpg",
-      "category": "car"
+      "category": "cars"
     },
     {
       "id": 9,
@@ -88,7 +88,7 @@
       "brand": "Fiat 600",
       "ubicacion": "Montevideo",
       "image": "cars-5.jpg",
-      "category": "car"
+      "category": "cars"
     },
     {
       "id": 10,
@@ -98,7 +98,7 @@
       "brand": "Motocicleta Vespa",
       "ubicacion": "Montevideo",
       "image": "cars-6.jpg",
-      "category": "car"
+      "category": "cars"
     },
     {
       "id": 11,
@@ -108,7 +108,7 @@
       "brand": "BMW Serie 3",
       "ubicacion": "Colonia",
       "image": "cars-2.jpg",
-      "category": "car"
+      "category": "cars"
     },
     {
       "id": 12,
@@ -118,7 +118,7 @@
       "brand": "Chevrolet",
       "ubicacion": "Montevideo",
       "image": "cars-1.jpg",
-      "category": "car"
+      "category": "cars"
     },
     {
       "id": 13,
@@ -127,7 +127,7 @@
       "brand": "MAC",
       "ubicacion": "Montevideo",
       "image": "technology-1.jpg",
-      "category": "technology"
+      "category": "technologies"
     },
     {
       "id": 14,
@@ -136,7 +136,7 @@
       "brand": "Hp",
       "ubicacion": "Montevideo",
       "image": "technology-2.jpg",
-      "category": "technology"
+      "category": "technologies"
     },
     {
       "id": 15,
@@ -145,7 +145,7 @@
       "brand": "Samsung",
       "ubicacion": "Montevideo",
       "image": "technology-3.jpg",
-      "category": "technology"
+      "category": "technologies"
     },
     {
       "id": 16,
@@ -154,7 +154,7 @@
       "brand": "LG",
       "ubicacion": "Montevideo",
       "image": "technology-4.jpg",
-      "category": "technology"
+      "category": "technologies"
     },
     {
       "id": 17,
@@ -163,7 +163,7 @@
       "brand": "MAC",
       "ubicacion": "Montevideo",
       "image": "technology-5.jpg",
-      "category": "technology"
+      "category": "technologies"
     },
     {
       "id": 18,
@@ -172,7 +172,7 @@
       "brand": "Apple",
       "ubicacion": "Montevideo",
       "image": "technology-6.jpg",
-      "category": "technology"
+      "category": "technologies"
     }
   ]
 }

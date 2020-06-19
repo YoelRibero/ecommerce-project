@@ -50,3 +50,15 @@
     }
   }
 }
+
+.category__page {
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    &--navBar {
+      width: 25%;
+    }
+    &--content {
+      width: 75%;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.breadcrumb {
+  padding: 1rem 0;
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+  }
+  &__item {
+    a {
+      color: $color-primary;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+      &::after {
+        content: '>>';
+        display: inline-block;
+        margin: 0 .5rem;
+        color: $color-font;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.filter__title {
+  text-transform: none;
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: .5rem;
+}
+
+.category__page {
+  &--filter {
+    margin-bottom: 1rem;
+  }
+  &--list {
+    margin: 0;
+    padding: 0;
+    padding-left: .5rem;
+    list-style: none;
+    border-left: 1px solid #777;
+  }
+  &--item {
+    margin-bottom: .5rem;
+    a {
+      color: $color-font;
+      text-decoration: none;
+    }
+  }
+}

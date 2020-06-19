@@ -3,10 +3,12 @@ import Glide from "@glidejs/glide";
 import Products from './components/products'
 import Cart from './components/cart'
 import swal from "sweetalert";
+import Categories from "./components/categories";
 
 // Instanciar clases
 const products = new Products();
 const cart = new Cart();
+const category = new Categories()
 
 // Vars
 const mobile = window.matchMedia("screen and (max-width: 425px)");
@@ -44,12 +46,17 @@ function carousel() {
 
 // Listeners
 document.addEventListener('DOMContentLoaded', async () => {
-  // Slider
-  slider();
-  // Carousel new products
-  carousel();
-  // Render Products
-  await products.mapProducts();
+  const location = window.location.pathname;
+  if(location === '/') {
+    // Slider
+    slider();
+    // Carousel new products
+    carousel();
+    // Render Products
+    await products.productsRandom(6, ".home__popular--products");
+  } else {
+    category.productCategory()
+  }
   // All listeners
   listenersAfterLoadadDOM();
 })
@@ -57,7 +64,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Listener dropdown Cart
 function listenersAfterLoadadDOM() {
   const $products = document.querySelectorAll(".product");
-  
   // Listener dropdown
   document.querySelector("[data-cart]").addEventListener("click", (e) => {
     e.preventDefault();

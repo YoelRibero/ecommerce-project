@@ -55,5 +55,17 @@ module.exports = {
       filename: "index.html",
       template: path.join(__dirname, "templates/index.html"),
     }),
+    new HtmlWebpackPlugin({
+      filename: "houses.html",
+      template: path.join(__dirname, "templates/houses.html"),
+    }),
+    new HtmlWebpackPlugin({
+      filename: "cars.html",
+      template: path.join(__dirname, "templates/cars.html"),
+    }),
+    new HtmlWebpackPlugin({
+      filename: "technologies.html",
+      template: path.join(__dirname, "templates/technologies.html"),
+    }),
   ],
 };
