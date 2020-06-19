@@ -1,9 +1,14 @@
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
 @import './globals/globals.scss';
 
 @import './components/header.scss';
 @import './components/footer.scss';
 
 @import './components/home.scss';
+@import './components/slider.scss';
+@import './components/categories.scss';
 @import './components/catalogue.scss';
 
 @import './components/products.scss';

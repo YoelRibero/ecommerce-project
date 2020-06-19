@@ -29,6 +29,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "sweetalert": "^2.1.2"
   }
 }

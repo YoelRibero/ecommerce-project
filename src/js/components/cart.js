@@ -61,19 +61,20 @@ export default class Cart {
     this.printCart(this.cart);
   }
   printCart(cart) {
+    const $cartContainer = document.querySelector(".nav__cart--content");
     if (cart.length === 0) {
       document.querySelector(
         ".nav__cart--content"
       ).innerHTML = `<p>Your cart is empty</p>`;
     } else {
-      document.querySelector(".nav__cart--content").innerHTML = "";
+      $cartContainer.innerHTML = "";
     }
     document.querySelector('.pill-count').textContent = cart.length
     cart.forEach(product => {
       const { id, name, price } = product
       const HTML = this.templateProduct(id, name, price)
       const templateHTML = this.createTemplate(HTML)
-      document.querySelector(".nav__cart--content").append(templateHTML);
+      $cartContainer.append(templateHTML);
     })
   }
 } 
