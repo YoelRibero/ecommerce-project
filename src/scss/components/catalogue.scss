@@ -1,4 +1,5 @@
-.home__popular--products {
+.products__grid {
+  margin-bottom: 2rem;
   @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

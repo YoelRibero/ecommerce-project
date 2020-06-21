@@ -1,7 +1,9 @@
 import API from "./api";
+import Products from './products'
 
 export default class Categories {
   constructor() {
+    this.products = new Products();
     this.api = new API();
   }
   async getProducts() {
@@ -14,6 +16,6 @@ export default class Categories {
     const category = document.title.toLowerCase()
     console.log(category)
     const productsCategory = products.filter(product => product.category === category)
-    console.log(productsCategory)
+    this.products.mapProducts(productsCategory, ".category__page--content");
   }
 }

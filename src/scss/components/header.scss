@@ -30,7 +30,9 @@
     height: 3rem;
     border-radius: 50%;
     background-color: $color-primary;
-    position: relative;
+    position: fixed;
+    bottom: 2%;
+    right: 5%;
     box-shadow: $shadow;
     cursor: pointer;
     transition: .3s;
@@ -60,6 +62,9 @@
         width: 1.8rem;
       }
     }
+    > .header__nav--list {
+      display: none;
+    }
     @media screen and (min-width: 1024px) {
       display: none;
     }
@@ -70,6 +75,9 @@
     margin: 0;
   }
   &__nav--item {
+    position: relative;
+    margin: 0;
+    margin-right: 1rem;
     margin-bottom: 1rem;
     a {
       text-decoration: none;
@@ -77,6 +85,10 @@
       text-transform: uppercase;
       font-weight: 600;
       letter-spacing: 2px;
+      img {
+        width: 30px;
+        height: 30px;
+      }
     }
   }
   &__nav {
@@ -84,18 +96,19 @@
     &.is-active {
       transform: translateX(1000px);
       display: block;
-      padding: 1rem 2rem;
       animation: fadeRight .3s ease-out forwards;
       position: fixed;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 3rem;
+      background-color: $color-primary;
+      width: 15rem;
+      height: 15rem;
+      border-radius: 50%;
+      bottom: -5.5rem;
+      right: -5.5rem;
       z-index: 1;
-      background-color: $color-light;
       + .header__hamburguer {
+        background-color: darken($color-primary, 15);
         span {
-          background-color: $color-primary;
+          background-color: darken($color-primary, 15);
           left: .75rem;
           &::before {
             transform: rotate(45deg);
@@ -108,11 +121,28 @@
           }
         }
       }
-      @media screen and (min-width: 425px) {
-        left: 40%;
+      .header__nav--item {
+        position: absolute;
+        width: 2rem;
+        top: 2rem;
+        left: calc(50% - 1rem);
+        transform-origin: center 6rem;
+        &:nth-of-type(2) {
+          transform: rotate(-45deg);
+          img {
+            transform: rotate(45deg);
+          }
+        }
+        &:nth-of-type(3) {
+          transform: rotate(-90deg);
+          img {
+            transform: rotate(90deg);
+          }
+        }
       }
-      @media screen and (min-width: 600px) {
-        left: 50%;
+      @media screen and (min-width: 768px) {
+        width: 16rem;
+        height: 16rem;
       }
     }
     @media screen and (min-width: 1024px) {
@@ -121,18 +151,6 @@
       &--list {
         padding: 0;
         display: flex;
-      }
-      &--item {
-        position: relative;
-        margin: 0;
-        margin-right: 1rem;
-        a {
-          color: $color-light;
-          img {
-            width: 30px;
-            height: 30px;
-          }
-        }
       }
     }
   }
