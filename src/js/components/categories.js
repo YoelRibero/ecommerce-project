@@ -14,7 +14,6 @@ export default class Categories {
   async productCategory() {
     const products = await this.getProducts()
     const category = document.title.toLowerCase()
-    console.log(category)
     const productsCategory = products.filter(product => product.category === category)
     this.products.mapProducts(productsCategory, ".category__page--content");
   }

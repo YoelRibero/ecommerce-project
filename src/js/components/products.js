@@ -19,7 +19,7 @@ export default class Products {
     return `
         <article class="product" data-id="${id}">
           <div class="product__image">
-            <img src="src/images/products/${images}" alt="product-${id}" />
+            <img src="${images}" alt="product-${id}" />
           </div>
           <div class="product__description">
             <div class="product__title">${title}</div>

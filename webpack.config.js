@@ -67,5 +67,13 @@ module.exports = {
       filename: "technologies.html",
       template: path.join(__dirname, "templates/technologies.html"),
     }),
+    new HtmlWebpackPlugin({
+      filename: "checkout.html",
+      template: path.join(__dirname, "templates/checkout.html"),
+    }),
+    new HtmlWebpackPlugin({
+      filename: "order-confirmation.html",
+      template: path.join(__dirname, "templates/order-confirmation.html"),
+    }),
   ],
 };

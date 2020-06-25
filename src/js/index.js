@@ -4,11 +4,13 @@ import Products from './components/products'
 import Cart from './components/cart'
 import swal from "sweetalert";
 import Categories from "./components/categories";
+import Checkout from "./components/checkout";
 
 // Instanciar clases
 const products = new Products();
 const cart = new Cart();
-const category = new Categories()
+const category = new Categories();
+const checkout = new Checkout();
 
 // Vars
 const mobile = window.matchMedia("screen and (max-width: 425px)");
@@ -54,11 +56,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     carousel();
     // Render Products
     await products.productsRandom(6, ".home__popular--products");
+    // All listeners
+    listenersAfterLoadadDOM();
+  } else if (location === '/checkout.html' || location === '/order-confirmation.html') {
+    checkout.mapCart(productsCart());
   } else {
     category.productCategory()
+    // All listeners
+    listenersAfterLoadadDOM();
   }
-  // All listeners
-  listenersAfterLoadadDOM();
 })
 
 // Listener dropdown Cart
@@ -110,3 +116,9 @@ function listenersAfterLoadadDOM() {
   });
 }
 
+// Get products cart
+
+const productsCart = () => {
+  const products = localStorage.getItem('cart')
+  return JSON.parse(products);
+}

@@ -1,5 +1,18 @@
 .cart {
   margin-bottom: 2rem;
+  &__action {
+    text-align: center;
+    a {
+      width: 100%;
+      display: block;
+      border-radius: 3px;
+      padding: .5rem 0 0;
+      max-width: 80%;
+      margin: 0 auto;
+      color: $color-primary;
+      text-transform: none;
+    }
+  }
 }
 
 .nav__dropdown {
