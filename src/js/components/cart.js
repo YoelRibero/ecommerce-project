@@ -62,20 +62,24 @@ export default class Cart {
   }
   printCart(cart) {
     const $cartContainer = document.querySelector(".nav__cart--content");
-    if (cart.length === 0) {
-      document.querySelector(".nav__cart--content").innerHTML = `<p>Your cart is empty</p>`;
-    } else {
-      $cartContainer.innerHTML = "";
-    }
-    document.querySelector('.pill-count').textContent = cart.length
-    cart.forEach(product => {
-      const { id, name, price } = product
-      const HTML = this.templateProduct(id, name, price)
-      const templateHTML = this.createTemplate(HTML)
-      $cartContainer.append(templateHTML);
-    })
-    if (cart.length !== 0) {
-      $cartContainer.innerHTML += `<div class="cart__action"><a href="./checkout.html">To Buy</a></div>`;
+    if($cartContainer) {
+      if (cart.length === 0) {
+        document.querySelector(
+          ".nav__cart--content"
+        ).innerHTML = `<p>Your cart is empty</p>`;
+      } else {
+        $cartContainer.innerHTML = "";
+      }
+      document.querySelector(".pill-count").textContent = cart.length;
+      cart.forEach((product) => {
+        const { id, name, price } = product;
+        const HTML = this.templateProduct(id, name, price);
+        const templateHTML = this.createTemplate(HTML);
+        $cartContainer.append(templateHTML);
+      });
+      if (cart.length !== 0) {
+        $cartContainer.innerHTML += `<div class="cart__action"><a href="./checkout.html">To Buy</a></div>`;
+      }
     }
   }
 } 

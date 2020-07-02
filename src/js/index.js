@@ -5,6 +5,8 @@ import Cart from './components/cart'
 import swal from "sweetalert";
 import Categories from "./components/categories";
 import Checkout from "./components/checkout";
+import Modal from './components/modal';
+import User from './components/user';
 
 // Instanciar clases
 const products = new Products();
@@ -19,6 +21,8 @@ const notebook = window.matchMedia("screen and (max-width: 1024px)");
 const desktop = window.matchMedia("screen and (max-width: 2000px)");
 
 const $cartContainer = document.querySelector(".nav__cart--content");
+const $modalContainer = document.querySelector("[data-modal]");
+const $userContainer = document.querySelector("[data-user]");
 
 // Functions
 
@@ -114,6 +118,13 @@ function listenersAfterLoadadDOM() {
       });
     }
   });
+
+  // Listener User
+  $userContainer.addEventListener('click', (e) => {
+    e.preventDefault()
+    const templateUser = new User()
+    new Modal(templateUser.render())
+  })
 }
 
 // Get products cart
