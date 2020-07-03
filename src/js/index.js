@@ -53,7 +53,8 @@ function carousel() {
 // Listeners
 document.addEventListener('DOMContentLoaded', async () => {
   const location = window.location.pathname;
-  if(location === '/') {
+  console.log(window.location)
+  if(location === '/' || location === '/ecommerce-project/dist/index.html') {
     // Slider
     slider();
     // Carousel new products
