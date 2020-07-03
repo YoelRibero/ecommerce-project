@@ -8,7 +8,7 @@ export default class Checkout {
     return `
         <div class="checkout__product">
           <div class="checkout__product--name">${name}</div>
-          <div class="checkout__product--price">${price}</div>
+          <div class="checkout__product--price">USD ${price}</div>
         </div>
       `;
   }
@@ -16,11 +16,14 @@ export default class Checkout {
     console.log(cart)
     const $cartContainer = document.querySelector(".checkout__products");
     document.querySelector(".checkout__length").textContent = `${cart.length} Producto/s`;
+    let total = 0;
     cart.forEach(product => {
       const { name, price } = product;
       const HTML = this.templateProduct(name, price);
       const templateHTML = this.createTemplate(HTML);
       $cartContainer.append(templateHTML);
+      total += price
     });
+    document.querySelector(".checkout__total--price").textContent = total;
   }
 }

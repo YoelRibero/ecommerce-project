@@ -28,7 +28,7 @@ export default class Cart {
             </figure>
             <section class="product__cart--description">
               <div class="product__cart--title">${title}</div>
-              <div class="product__cart--price">${price}</div>
+              <div class="product__cart--price">USD ${price}</div>
             </section>
           </div>
           <button class="button button--danger"><img src="${imageDelete}" data-deleted /></div>
