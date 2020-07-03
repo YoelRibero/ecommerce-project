@@ -19,7 +19,7 @@ export default class Products {
     return `
         <article class="product" data-id="${id}">
           <div class="product__image">
-            <img src="${image}" alt="product-${id}" />
+            <img src="https://yoelribero.github.io/ecommerce-project/src/images/products/${image}" alt="product-${id}" />
           </div>
           <div class="product__description">
             <div class="product__title">${title}</div>

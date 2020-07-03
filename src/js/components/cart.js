@@ -19,12 +19,12 @@ export default class Cart {
 		html.body.innerHTML = HTMLString
 		return html.body.children[0]
 	}
-  templateProduct(id, title, price) {
+  templateProduct(id, image, title, price) {
     return `
         <article class="product__cart" data-id="${id}">
           <div class="product__cart--info">
             <figure class="product__cart--image">
-              <img src="${imageProduct}" />
+              <img src="https://yoelribero.github.io/ecommerce-project/src/images/products/${image}" />
             </figure>
             <section class="product__cart--description">
               <div class="product__cart--title">${title}</div>
@@ -47,7 +47,8 @@ export default class Cart {
         const productCart = {
           id: product.id,
           name: product.name,
-          price: product.price
+          price: product.price,
+          image: product.image
         };
         this.cart.push(productCart);
         window.localStorage.setItem("cart", JSON.stringify(this.cart));
@@ -62,6 +63,7 @@ export default class Cart {
   }
   printCart(cart) {
     const $cartContainer = document.querySelector(".nav__cart--content");
+    console.log(cart)
     if($cartContainer) {
       if (cart.length === 0) {
         document.querySelector(
@@ -72,8 +74,8 @@ export default class Cart {
       }
       document.querySelector(".pill-count").textContent = cart.length;
       cart.forEach((product) => {
-        const { id, name, price } = product;
-        const HTML = this.templateProduct(id, name, price);
+        const { id, image, name, price } = product;
+        const HTML = this.templateProduct(id, image, name, price);
         const templateHTML = this.createTemplate(HTML);
         $cartContainer.append(templateHTML);
       });
