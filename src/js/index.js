@@ -57,6 +57,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   if(location === '/' || location === '/ecommerce-project/dist/index.html') {
     // Slider
     slider();
+    // Render New Products
+    await products.productsRandom(10, ".home__new--products .glide__slides");
+    products.newProducts()
     // Carousel new products
     carousel();
     // Render Products

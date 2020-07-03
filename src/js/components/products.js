@@ -1,5 +1,4 @@
 import API from "./api";
-import images from "../../images/1.jpg";
 
 export default class Products {
   constructor() {
@@ -46,10 +45,19 @@ export default class Products {
       document.querySelector(container).append(templateHTML);
     })
   }
-  async productsRandom(quanty, container) {
+  newProducts() {
+    const products = document.querySelectorAll(".home__new--products .glide__slides .product")
+    products.forEach(product => {
+      const li = document.createElement("li");
+      li.classList.add("glide__slide");
+      document.querySelector(".home__new--products .glide__slides").appendChild(li)
+      li.appendChild(product)
+    })
+  }
+  async productsRandom(quantity, container) {
     const products = await this.getProducts();
     let productsRandom = []
-    for (let i = 0; i < quanty; i++) {
+    for (let i = 0; i < quantity; i++) {
       const randomNumber = Math.floor(Math.random() * (18 - 1)) + 1;
       productsRandom.push(products[randomNumber])
     }
