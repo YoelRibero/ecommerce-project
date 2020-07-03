@@ -21,7 +21,7 @@ const notebook = window.matchMedia("screen and (max-width: 1024px)");
 const desktop = window.matchMedia("screen and (max-width: 2000px)");
 
 const $cartContainer = document.querySelector(".nav__cart--content");
-const $modalContainer = document.querySelector("[data-modal]");
+const $overlay = document.querySelector(".modal__overlay");
 const $userContainer = document.querySelector("[data-user]");
 
 // Functions
@@ -65,13 +65,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Render Products
     await products.productsRandom(6, ".home__popular--products");
     // All listeners
-    listenersAfterLoadadDOM();
+    setTimeout(() => {
+      listenersAfterLoadadDOM();
+    }, 1000);
   } else if (location === '/checkout.html' || location === '/order-confirmation.html') {
     checkout.mapCart(productsCart());
   } else {
     category.productCategory()
     // All listeners
-    listenersAfterLoadadDOM();
+    setTimeout(() => {
+      listenersAfterLoadadDOM();
+    }, 1000)
   }
 })
 
@@ -127,8 +131,15 @@ function listenersAfterLoadadDOM() {
   $userContainer.addEventListener('click', (e) => {
     e.preventDefault()
     const templateUser = new User()
-    new Modal(templateUser.render())
+    new Modal(templateUser.templateUser())
   })
+  // Cerrar modal fuera del target
+  window.addEventListener("click", () => {
+    if (event.target === $overlay) {
+      const modal = new Modal()
+      modal.hideModal();
+    }
+  });
 }
 
 // Get products cart

@@ -10,6 +10,6 @@ export default class Modal {
     this.modalContent.innerHTML = this.template;
   }
   hideModal() {
-
+    this.modalContainer.classList.remove('is-active')
   }
 }

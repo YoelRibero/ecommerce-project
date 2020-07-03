@@ -15,6 +15,16 @@
       }
     }
   }
+  .product {
+    &__title {
+      line-height: 1.2;
+    }
+    .aditional__info {
+      visibility: hidden;
+      opacity: 0;
+      transition: all .3s ease-in-out;
+    }
+  }
   .glide__slide {
     border-radius: 3px;
     overflow: hidden;
@@ -26,6 +36,10 @@
       opacity: 1;
       transform: scale(1.1);
       margin: 0 1rem;
+      .aditional__info {
+        visibility: visible;
+        opacity: 1;
+      }
     }
   }
   img {
@@ -38,22 +52,6 @@
     }
     @media screen and (min-width: 1024px) {
       height: 400px;
-    }
-  }
-  .product__carousel {
-    &--image {
-      border-bottom: 1px solid $color-border;
-    }
-    &--info {
-      @extend .product__description;
-    }
-    &--title {
-      @extend .product__title;
-    }
-    &--price {
-      font-weight: bold;
-      letter-spacing: 1px;
-      font-size: 20px;
     }
   }
 }
