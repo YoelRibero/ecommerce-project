@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     setTimeout(() => {
       listenersAfterLoadadDOM();
     }, 1000);
-  } else if (location === '/checkout.html' || location === '/order-confirmation.html') {
+  } else if (location.indexOf('checkout.html') > -1 || location.indexOf('order-confirmation.html') > -1) {
     checkout.mapCart(productsCart());
   } else {
     category.productCategory()
