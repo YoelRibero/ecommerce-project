@@ -13,6 +13,7 @@ const products = new Products();
 const cart = new Cart();
 const category = new Categories();
 const checkout = new Checkout();
+// const user = new User()
 
 // Vars
 const mobile = window.matchMedia("screen and (max-width: 425px)");
@@ -50,11 +51,11 @@ function carousel() {
   glideCarousel.mount();
 }
 
-// Listeners
+// Listeners Loaded DOM
 document.addEventListener('DOMContentLoaded', async () => {
   const location = window.location.pathname;
   console.log(window.location)
-  if(location === '/' || location === '/ecommerce-project/dist/index.html') {
+  if(location === '/' || location.indexOf('index.html') > -1) {
     // Slider
     slider();
     // Render New Products
@@ -65,17 +66,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Render Products
     await products.productsRandom(6, ".home__popular--products");
     // All listeners
-    setTimeout(() => {
-      listenersAfterLoadadDOM();
-    }, 1000);
+    listenersAfterLoadadDOM();
   } else if (location.indexOf('checkout.html') > -1 || location.indexOf('order-confirmation.html') > -1) {
     checkout.mapCart(productsCart());
   } else {
-    category.productCategory()
+    await category.productCategory()
     // All listeners
-    setTimeout(() => {
-      listenersAfterLoadadDOM();
-    }, 1000)
+    listenersAfterLoadadDOM();
   }
 })
 
@@ -130,8 +127,21 @@ function listenersAfterLoadadDOM() {
   // Listener User
   $userContainer.addEventListener('click', (e) => {
     e.preventDefault()
-    const templateUser = new User()
-    new Modal(templateUser.templateUser())
+    const user = new User()
+    new Modal(user.templateUserLogin());
+    // Submit form login
+    if (document.querySelector("#form-login")) {
+      document.querySelector("#form-login").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const user = new User();
+        user.submitForm();
+      });
+    } else if(document.querySelector("#close-session")) {
+      document.querySelector("#close-session").addEventListener('click', (e) => {
+        localStorage.removeItem("user");
+        location.reload()
+      })
+    }
   })
   // Cerrar modal fuera del target
   window.addEventListener("click", () => {

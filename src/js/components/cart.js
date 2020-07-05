@@ -1,6 +1,5 @@
 import API from './api'
 import imageDelete from '../../images/delete.svg'
-import imageProduct from '../../images/products/technology-2.jpg'
 
 export default class Cart {
   constructor() {

@@ -1,0 +1,56 @@
+.form {
+  &__group {
+    margin-bottom: 2rem;
+  }
+  &__label {
+    display: block;
+    margin-bottom: .5rem;
+  }
+  &__input {
+    border: 0;
+    border-bottom: 1px solid $color-border;
+    padding: .5rem 1rem .5rem 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: $color-light;
+    transition: all .3s ease-in-out;
+    &:focus {
+      border-color: $color-primary;
+      outline: none;
+    }
+  }
+  .button {
+    width: 100%;
+    background-color: $color-primary;
+    color: $color-light;
+    border-radius: 3px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 60%;
+    margin: auto;
+  }
+}
+
+.account {
+  &__info {
+    margin-bottom: 2rem;
+    display: block;
+    span {
+      &:first-child {
+        font-weight: bold;
+      }
+    }
+  }
+  &__action {
+    text-align: right;
+  }
+  .button {
+    background-color: $color-primary;
+    color: $color-light;
+    border-radius: 3px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 60%;
+    margin: auto;
+  }
+}

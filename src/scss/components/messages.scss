@@ -1,0 +1,15 @@
+.message {
+  p {
+    padding: 1rem;
+    border-radius: 3px;
+    margin: 0;
+    margin-bottom: 1rem;
+    color: $color-light;
+    background-color: #5bc0de;
+  }
+  &.error {
+    p {
+      background-color: $color-danger;
+    }
+  }
+}
