@@ -13,7 +13,6 @@ const products = new Products();
 const cart = new Cart();
 const category = new Categories();
 const checkout = new Checkout();
-// const user = new User()
 
 // Vars
 const mobile = window.matchMedia("screen and (max-width: 425px)");
@@ -92,11 +91,15 @@ function listenersAfterLoadadDOM() {
 
   // Listener add product cart
   $products.forEach((product) => {
-    product.addEventListener("click", (e) => {
+    product.addEventListener("click", async (e) => {
       e.preventDefault();
-      console.log(e);
       if (e.target.tagName === "BUTTON") {
         cart.addProductCart(e.path[1].dataset.id);
+      } else {
+        const id = e.path[2].dataset.id;
+        const templateProductModal = await products.getProduct(id);
+        const modal = new Modal(templateProductModal)
+        modal.showModal()
       }
     });
   });

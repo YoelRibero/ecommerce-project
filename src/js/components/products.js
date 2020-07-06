@@ -32,6 +32,25 @@ export default class Products {
         </article>
       `;
   }
+  templateProductModal(name, id, image, price, category, bedroom, brand) {
+    return `
+      <div class="modal__product" data-id="${id}">
+        <figure class="modal__product--image">
+          <img src="https://yoelribero.github.io/ecommerce-project/src/images/products/${image}" alt="product-${id}" />
+        </figure>
+        <section class="modal__product--info">
+          <h2 class="modal__product--name">${name}</h2>
+          <div class="modal__product--price"><span>USD</span> ${price}</div>
+          <div class="aditional__info">
+            <span class="product__bedroom">${bedroom}</span>
+            <span class="product__brand">${brand}</span>
+            <span class="product__category">${category}</span>
+          </div>
+          <button class="button">Agregar al carrito</div>
+        </section>
+      </div>
+    `;
+  }
   mapProducts(products, container) {
     products.forEach(product => {
       let { id, image, name, bedroom, brand, category } = product
@@ -63,5 +82,18 @@ export default class Products {
     }
     const productsWithoutRepeated = productsRandom.filter((product, index) => productsRandom.indexOf(product) === index)
     this.mapProducts(productsWithoutRepeated, container);
+  }
+  async getProduct(id) {
+    const products = await this.getProducts();
+    const dataProduct = products.filter(product => product.id === parseInt(id));
+    const product = dataProduct[0]
+    console.log(product)
+    let { name, idProduct, image, price, category, bedroom, brand } = product
+    if (bedroom === undefined) {
+      bedroom = "";
+    } else if (brand === undefined) {
+      brand = "";
+    }
+    return this.templateProductModal(name, idProduct, image, price, category, bedroom, brand)
   }
 }

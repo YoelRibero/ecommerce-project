@@ -18,46 +18,50 @@ export default class User {
     const cache = this.getUserStore()
     if(cache !== undefined) {
       return `
-        <h2>My Account</h2>
-        <div class="account">
-          <div class="account__info">
-            <span>Name: </span>
-            <span>${cache.name}</span>
-          </div>
-          <div class="account__info">
-            <span>Email: </span>
-            <span>${cache.email}</span>
-          </div>
-          <div class="account__action">
-            <button class="button" id="close-session">Close Session</button>
+        <div class="account__container">
+          <h2>My Account</h2>
+          <div class="account">
+            <div class="account__info">
+              <span>Name: </span>
+              <span>${cache.name}</span>
+            </div>
+            <div class="account__info">
+              <span>Email: </span>
+              <span>${cache.email}</span>
+            </div>
+            <div class="account__action">
+              <button class="button" id="close-session">Close Session</button>
+            </div>
           </div>
         </div>
       `;
     } else {
       return `
-        <h2>User Login</h2>
-        <div class="message"></div>
-        <form class="form" id="form-login">
-          <div class="form__group">
-            <label class="form__label">Name</label>
-            <input type="text" class="form__input" id="form-name" required />
-          </div>
-          <div class="form__group">
-            <label class="form__label">Password</label>
-            <input type="password" class="form__input" id="form-pass" required />
-          </div>
-          <div class="form__group">
-            <label class="form__label">Confirm Password</label>
-            <input type="password" class="form__input" id="form-confirmPass" required />
-          </div>
-          <div class="form__group">
-            <label class="form__label">Email</label>
-            <input type="email" class="form__input" id="form-email" required />
-          </div>
-          <div class="form__group">
-            <button class="form__action button">Login</button>
-          </div>
-        </form>
+        <div class="login__container">
+          <h2>User Login</h2>
+          <div class="message"></div>
+          <form class="form" id="form-login">
+            <div class="form__group">
+              <label class="form__label">Name</label>
+              <input type="text" class="form__input" id="form-name" required />
+            </div>
+            <div class="form__group">
+              <label class="form__label">Password</label>
+              <input type="password" class="form__input" id="form-pass" required />
+            </div>
+            <div class="form__group">
+              <label class="form__label">Confirm Password</label>
+              <input type="password" class="form__input" id="form-confirmPass" required />
+            </div>
+            <div class="form__group">
+              <label class="form__label">Email</label>
+              <input type="email" class="form__input" id="form-email" required />
+            </div>
+            <div class="form__group">
+              <button class="form__action button">Login</button>
+            </div>
+          </form>
+        </div>
       `;
     }
   }
