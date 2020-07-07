@@ -73,8 +73,6 @@ export default class User {
     if (validationPass) {
       const userInfo = {
         name: this.formName.value,
-        password: this.formPass.value,
-        confirPass: this.formConfirmPass.value,
         email: this.formEmail.value,
       };
       this.setUserStore(userInfo)

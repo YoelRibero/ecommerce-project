@@ -27,6 +27,9 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 1rem;
+  > .message {
+    margin-top: 1rem;
+  }
 }
 
 .button {
@@ -72,6 +75,18 @@ h1, h2, h3, h4, h5, h6 {
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(-1000px);
+  }
+  50% {
+    transform: translateY(-500px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 

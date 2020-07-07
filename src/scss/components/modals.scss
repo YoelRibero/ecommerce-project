@@ -29,6 +29,7 @@
     border-radius: 5px;
     box-shadow: $shadow;
     padding: 1rem;
+    animation: fadeUp .3s linear forwards;
     @media screen and (min-width: 768px) {
       // height: 60%;
       display: flex;

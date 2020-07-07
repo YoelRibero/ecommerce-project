@@ -46,8 +46,28 @@
     <div class="wrapper">
       <h1 class="checkout__title">Order Confirmation</h1>
       <div class="checkout__content">
-        <form action="">
-          
+        <form action="./thankyou.html" class="form__order" id="form-order-confirmation">
+          <section class="checkout__data">
+            <div class="checkout__item">
+              <label>Name</label>
+              <div class="checkout__name"></div>
+            </div>
+            <div class="checkout__item">
+              <label>Email</label>
+              <div class="checkout__email"></div>
+            </div>
+            <div class="checkout__item">
+              <label>Address</label>
+              <div class="checkout__address"></div>
+            </div>
+            <div class="checkout__item">
+              <label>Delivery Address</label>
+              <div class="checkout__deliveryAddress"></div>
+            </div>
+          </section>
+          <div class="checkout__action">
+            <button class="button">Confirm Purchase</button>
+          </div>
         </form>
         <div class="checkout__summary">
           <h4>Summary of Purchase</h4>

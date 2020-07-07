@@ -1,4 +1,23 @@
 export default class Checkout {
+  constructor() {
+    this.formCheckout = document.getElementById("form-checkout");
+    this.checkoutEmail = document.getElementById("checkout-email");
+    this.checkoutName = document.getElementById("checkout-name");
+    this.checkoutAddress = document.getElementById("checkout-address");
+    this.checkoutDeliveryAddress = document.getElementById("checkout-delivery-address");
+  }
+  cacheExist() {
+    const data = window.localStorage.getItem("user");
+    return JSON.parse(data)
+  }
+  changeForm() {
+    const cacheExist = this.cacheExist()
+    if (cacheExist) {
+      const { name, email } = cacheExist;
+      this.checkoutEmail.value = email
+      this.checkoutName.value = name
+    }
+  }
   createTemplate(HTMLString) {
 		const html = document.implementation.createHTMLDocument()
 		html.body.innerHTML = HTMLString
@@ -25,5 +44,14 @@ export default class Checkout {
       total += price
     });
     document.querySelector(".checkout__total--price").textContent = total;
+  }
+  setForm() {
+    const user = {
+      name: this.checkoutName.value,
+      email: this.checkoutEmail.value,
+      address: this.checkoutAddress.value,
+      addressDelivery: this.checkoutDeliveryAddress.value
+    }
+    window.localStorage.setItem("user", JSON.stringify(user));
   }
 }

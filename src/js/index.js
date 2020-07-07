@@ -7,12 +7,14 @@ import Categories from "./components/categories";
 import Checkout from "./components/checkout";
 import Modal from './components/modal';
 import User from './components/user';
+import OrderConfirmation from "./components/order-confirmation";
 
 // Instanciar clases
 const products = new Products();
 const cart = new Cart();
 const category = new Categories();
 const checkout = new Checkout();
+const orderConfirmation = new OrderConfirmation()
 
 // Vars
 const mobile = window.matchMedia("screen and (max-width: 425px)");
@@ -50,6 +52,13 @@ function carousel() {
   glideCarousel.mount();
 }
 
+// Submit form checkout
+function submitCheckout() {
+  document.getElementById("form-checkout").addEventListener('submit', (e) => {
+    checkout.setForm()
+  })
+}
+
 // Listeners Loaded DOM
 document.addEventListener('DOMContentLoaded', async () => {
   const location = window.location.pathname;
@@ -68,6 +77,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     listenersAfterLoadadDOM();
   } else if (location.indexOf('checkout.html') > -1 || location.indexOf('order-confirmation.html') > -1) {
     checkout.mapCart(productsCart());
+  } else if (location.indexOf('checkout.html') > -1) {
+    // Evalúa si ya hay usuario creado
+    checkout.changeForm()
+    // Cuando se hace submit en form
+    submitCheckout()
+  } else if (location.indexOf('order-confirmation.html') > -1) {
+    // Order Confirmation, render data
+    orderConfirmation.renderData()
+    // Reset Local after order Confirmation
+    document.querySelector("#form-order-confirmation").addEventListener('submit', () => {
+      window.localStorage.clear()
+    })
   } else {
     await category.productCategory()
     // All listeners

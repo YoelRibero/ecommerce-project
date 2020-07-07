@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Order Confirmation</title>
+  <title>Ecommerce</title>
   <link rel="shortcut icon" href="../src/images/icon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
             </figure>
           </a>
         </div>
-        <!-- <nav class="header__nav">
+        <nav class="header__nav">
           <ul class="header__nav--list">
             <li class="header__nav--item">
               <a href="" data-cart>
@@ -32,56 +32,24 @@
                 </div>
               </nav>
             </li>
-            <li class="header__nav--item"><a href=""><img src="../src/images/user.svg"></a></li>
+            <li class="header__nav--item"><a href="" data-user><img src="../src/images/user.svg"></a></li>
           </ul>
-        </nav> -->
-        <!-- <div class="header__hamburguer">
+        </nav>
+        <div class="header__hamburguer">
           <span></span>
-        </div> -->
+        </div>
       </div>
     </div>
   </header>
 
-  <div class="main orderConfirmation">
+  <main class="main">
     <div class="wrapper">
-      <h1 class="checkout__title">Order Confirmation</h1>
-      <div class="checkout__content">
-        <form action="./thankyou.html" class="form__order" id="form-order-confirmation">
-          <section class="checkout__data">
-            <div class="checkout__item">
-              <label>Name</label>
-              <div class="checkout__name"></div>
-            </div>
-            <div class="checkout__item">
-              <label>Email</label>
-              <div class="checkout__email"></div>
-            </div>
-            <div class="checkout__item">
-              <label>Address</label>
-              <div class="checkout__address"></div>
-            </div>
-            <div class="checkout__item">
-              <label>Delivery Address</label>
-              <div class="checkout__deliveryAddress"></div>
-            </div>
-          </section>
-          <div class="checkout__action">
-            <button class="button">Confirm Purchase</button>
-          </div>
-        </form>
-        <div class="checkout__summary">
-          <h4>Summary of Purchase</h4>
-          <div class="checkout__length"></div>
-          <div class="checkout__products"></div>
-          <div class="checkout__total">
-            <span class="checkout__total--text">Total(USD)</span>
-            <span class="checkout__total--price">0</span>
-          </div>
-        </div>
+      <div class="message">
+        <p>Muchas gracias por tu compra!</p>
       </div>
     </div>
-  </div>
-
+  </main>
+  
   <footer class="footer">
     <div class="wrapper">
       <div class="footer__container">
@@ -114,5 +82,13 @@
       <span class="copyright">All rights reserved | Design and Realization Yoel Ribero 😎 2020</span>
     </div>
   </footer>
+
+  <div class="modal" data-modal>
+    <div class="modal__overlay">
+      <div class="modal__content">
+        
+      </div>
+    </div>
+  </div>
 </body>
 </html>
